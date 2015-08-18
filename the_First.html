@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>myStyle</title>
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jq_color.js"></script>
+    <script src="js/jscolor.js"></script>
+    <script src="js/model_Jiaohu.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/upload_img.js"></script>
+    <script src="js/write_Json.js"></script>
+    <script src="js/page_Choose.js"></script>
+    <script src="js/add_menu.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/send_Json.js"></script>
+
+    <link href="css/style_1.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/models.css" rel="stylesheet" type="text/css">
+    <link href="css/tools.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav id="top" class="navbar navbar-default">
+        <div class="container-fluid">
+        <p class="logo"><a><img alt="设计页面" src="img/logo.png" width="42">设计页面</a></p>
+            <ul class="nav navbar-nav _pages">
+                <li class="history_page">历史页面</li>
+                <li class="current active_model">我的页面</li>
+                <li class="help_page">帮助</li>
+            </ul>
+            <button class="btn btn-info save" type="submit">保存</button>
+        </div>
+    </nav>
+
+    <div id="title">
+        <div class="stl_Choose">
+            <ul>
+                <li class="menu" id="page1">
+                    <div class="menu_model">
+                        <div class="localImag">
+                            <img class="icon" >
+                            <img class="bicon"  src="img/bicon.jpg">
+                        </div>
+                    </div>
+                    <div class="menu_in"><p>首页</p></div>
+                </li>
+
+                <li id="addMenu">添加</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+    <div id="content">
+
+
+
+        <div id="model" >
+
+            <ul>
+                <li class="small" id="p901">顶部标题栏</li>
+
+                <li class="small" id="p902">页面标题栏</li>
+
+                <!--<li class="small" id="p903">页面分割线</li>-->
+                <!--<HR  width="100%" color=#ffffff SIZE=1 style="margin: 0">-->
+                <li class="small" id="p904">图标导航栏</li>
+
+                <li class="small" id="p905">五格导航栏</li>
+
+                <li class="small" id="p906">工具类导航栏</li>
+
+                <li class="small" id="p907">图片轮播栏</li>
+
+                <li class="small" id="p911">并列双标题</li>
+
+                <li class="small" id="p912">商品模板</li>
+
+                <li class="small" id="p913">信息模板</li>
+
+                <li class="small" id="p921">分享模板</li>
+
+                <li class="small" id="990">WebView模板</li>
+
+                <li class="small" id="p908">服务页标题栏</li>
+
+            </ul>
+
+
+        </div>
+        <div id="detail_model" >
+            <div id="cover_01"></div>
+            <div id="cover_02"></div>
+            <div id="cover_03"></div>
+
+        </div>
+
+
+                <div id="design">
+
+                    <div class="show_model"></div>
+
+                    <div id="round" >
+                        <ul id="model_field">
+                        <!--<ul id="design_content" style="list-style: none;padding:0px;">-->
+
+                        <!--</ul>-->
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+                <div class="tool" >
+                    <div class="tool_title">工具栏</div>
+                    <div class="stl_Choose_tool">
+                        <div class="stl_Choose_content">
+                            <div class="stl_Choose_tool_icon">
+                                <div class="localImag">
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        <div class="mask"></div>
+                                        <input type="file" name="file" class="doc" style="display:none">
+                                        <input type="submit" style="display:none">
+                                        <img class="preview"  style="display: block; width: 24px; height: 24px;">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="stl_Choose_tool_bicon">
+                                <div class="localImag">
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        <div class="mask"></div>
+                                        <input type="file" name="file" class="doc" style="display:none">
+                                        <input type="submit" style="display:none">
+                                        <img class="preview"  style="display: block; width: 24px; height: 24px;">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="stl_Choose_tool_in"><input type="text" value="首页"/></div>
+                        </div>
+                        <p class="stl_p">聚焦颜色</p><input class="color stl_Choose_tool_color" value="ffffff"/>
+                        <p class="stl_p">失焦颜色</p><input class="color stl_Choose_tool_bcolor" value="ffffff"/>
+                        <button id="stl_Choose_tool_enter" class="btn btn-success">确认</button>
+                        <button id="stl_Choose_tool_delete" class="btn btn-danger">删除</button>
+                    </div>
+
+                    <div class="model_order">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="current_tool">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <div class="hidden">
+                        <ul>
+                        <li id="0" class="li_hidden">
+                            <div class="model_order_icon">
+                                <a class="model_up"></a><a class="model_down"></a>
+                            </div>
+                            <div class="model_order_txt">0</div>
+                            <div class="model_del">
+                                <i class="model_del_icon"></i>
+                            </div>
+                        </li>
+                        <li class="tool_901">
+                                <p>标题颜色</p><input type = "text" class="color p901_color" value="ffffff"/>
+                                <p>背景颜色</p><input type = "text" class="color p901_bgclr" value="3578f2"/>
+                                <p>左侧图标进入页的模板</p>
+                                <select class="p901_entry">
+                                    <option value="97">Page页97</option>
+                                    <option value="98">论坛二级页面98</option>
+                                    <option value="99">个人信息页99</option>
+                                    <option value="101">通知列表101</option>
+                                    <option value="102">公告列表102</option>
+                                    <option value="103">维修二级页103</option>
+                                    <option value="104">家居报维二级页104</option>
+                                    <option value="105">我的订单列表105</option>
+                                    <option value="106">管理费页106</option>
+                                    <option value="107">报障/报修页107</option>
+                                    <option value="108">投诉页108</option>
+                                    <option value="109">通行证页109</option>
+                                    <option value="110">打电话110</option>
+                                </select>
+                                <p>右侧图标进入页的模板</p>
+                                <select class="p901_entry">
+                                    <option value="97">Page页97</option>
+                                    <option value="98">论坛二级页面98</option>
+                                    <option value="99">个人信息页99</option>
+                                    <option value="101">通知列表101</option>
+                                    <option value="102">公告列表102</option>
+                                    <option value="103">维修二级页103</option>
+                                    <option value="104">家居报维二级页104</option>
+                                    <option value="105">我的订单列表105</option>
+                                    <option value="106">管理费页106</option>
+                                    <option value="107">报障/报修页107</option>
+                                    <option value="108">投诉页108</option>
+                                    <option value="109">通行证页109</option>
+                                    <option value="110">打电话110</option>
+                                </select>
+                        </li>
+                        <li class="tool_902">
+                                <p>标题颜色</p><input class="color p902_color" value="808080"/>
+                                <p>背景颜色</p><input class="color p902_bgclr" value="ffffff"/>
+                        </li>
+                        <li class="tool_904">
+                            <p>背景颜色</p><input class="color p904_bgclr" value="ffffff"/>
+                            <p>标题颜色</p>
+                            <div class="color_float_div">
+                            <input class="color p904_color_0 color_float" value="808080"/>
+                            <input class="color p904_color_1 color_float" value="808080"/>
+                            <input class="color p904_color_2 color_float" value="808080"/>
+                            <input class="color p904_color_3 color_float" value="808080"/>
+                            </div>
+                            <p>00</p>
+                            <select class="p904_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>01</p>
+                            <select class="p904_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>02</p>
+                            <select class="p904_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>03</p>
+                            <select class="p904_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        <li class="tool_905">
+                            <p>标题颜色</p>
+                            <input class="color p905_color_0" value="ffffff"/>
+                            <div class="color_float_div">
+                            <input class="color p905_color_1 color_float" value="ffffff"/>
+                            <input class="color p905_color_2 color_float" value="ffffff"/>
+                            <input class="color p905_color_3 color_float" value="ffffff"/>
+                            <input class="color p905_color_4 color_float" value="ffffff"/>
+                            </div>
+                            <p>背景颜色</p>
+                            <input class="color p905_bgclr_0" value="9ad8f1"/>
+                            <div class="color_float_div">
+                                <input class="color p905_bgclr_1 color_float" value="#bce67a"/>
+                                <input class="color p905_bgclr_2 color_float" value="f6dc6d"/>
+                                <input class="color p905_bgclr_3 color_float" value="face9f"/>
+                                <input class="color p905_bgclr_4 color_float" value="a9f1b1"/>
+                            </div>
+                            <p>描述颜色</p>
+                            <input class="color p905_desclr" value="ffffff"/>
+                            <p>00</p>
+                            <select class="p905_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>01</p>
+                            <select class="p905_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>02</p>
+                            <select class="p905_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>03</p>
+                            <select class="p905_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>04</p>
+                            <select class="p905_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        <li class="tool_906">
+                            <p>标题颜色</p>
+                            <input class="color p906_color_0" value="999999"/>
+                            <input class="color p906_color_1" value="999999"/>
+                            <input class="color p906_color_2" value="999999"/>
+                            <p>00</p>
+                            <select class="p906_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>01</p>
+                            <select class="p906_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>02</p>
+                            <select class="p906_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        <li class="tool_907">
+                            <select class="p913_entry_hidden" style="display:none">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        <li class="tool_911">
+                            <p>标题颜色</p>
+                                <input class="color p911_color_0" value="000000"/>
+                                <input class="color p911_color_1" value="000000"/>
+                            <p>描述颜色</p>
+                                <input class="color p911_desclr_0" value="808080"/>
+                                <input class="color p911_desclr_1" value="808080"/>
+                            <p>00</p>
+                            <select class="p911_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                            <p>01</p>
+                            <select  class="p911_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        <li class="tool_912">
+                            <p>标题颜色</p><input class="color p912_color" value="4d4d4d"/>
+                            <p>描述颜色</p><input class="color p912_desclr" value="808080"/>
+                            <p>00</p>
+                            <select  class="p912_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        <li class="tool_913">
+                            <p>标题颜色</p><input class="color p913_color" value="4d4d4d"/>
+                            <p>描述颜色</p><input class="color p913_desclr" value="808080"/>
+                            <p>00</p>
+                            <select  class="p913_entry">
+                                <option value="97">Page页97</option>
+                                <option value="98">论坛二级页面98</option>
+                                <option value="99">个人信息页99</option>
+                                <option value="101">通知列表101</option>
+                                <option value="102">公告列表102</option>
+                                <option value="103">维修二级页103</option>
+                                <option value="104">家居报维二级页104</option>
+                                <option value="105">我的订单列表105</option>
+                                <option value="106">管理费页106</option>
+                                <option value="107">报障/报修页107</option>
+                                <option value="108">投诉页108</option>
+                                <option value="109">通行证页109</option>
+                                <option value="110">打电话110</option>
+                            </select>
+                        </li>
+                        </ul>
+                            <li id="p_901">
+                                <div class="model_p901">
+                                    <a class="left_p901">
+                                        <div class="localImag">
+                                            <form action="" method="post" enctype="multipart/form-data">
+                                                <div class="mask"></div>
+                                                <input type="file" name="file" class="doc" style="display:none">
+                                                <input type="submit" style="display:none">
+                                                <img class="preview" src="img/_defult.jpg" style="display: block; width: 60px; height: 60px;">
+                                            </form>
+                                        </div>
+                                    </a>
+                                    <a class="title_p901"><input type="text" value="华景新城"></a>
+                                    <a class="right_p901">
+                                        <div class="localImag">
+                                            <form action="" method="post" enctype="multipart/form-data">
+                                                <div class="mask"></div>
+                                                <input type="file" name="file" class="doc" style="display:none">
+                                                <input type="submit" style="display:none">
+                                                <img class="preview" src="img/_defult.jpg" style="display: block; width: 60px; height: 60px;">
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li id="model_902">
+                                <div class="model_902">
+                                    <div class="model_902_con">
+                                        <div class="model_902_icon">
+                                            <div class="localImag">
+                                                <form action="" method="post" enctype="multipart/form-data">
+                                                    <div class="mask"></div>
+                                                    <input type="file" name="file" class="doc" style="display:none">
+                                                    <input type="submit" style="display:none">
+                                                    <img class="preview"  style="display: block; width: 30px; height: 30px;">
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="model_902_title"><input type="text" value="最新动态"/></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="model_904">
+                                <div class="model_904">
+                                    <ul>
+                                        <li>
+                                            <div class="model_904_cell">
+                                                <div class="model_904_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="model_904_title"><input type="text" value="通知公告"/></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="model_904_cell">
+                                                <div class="model_904_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="model_904_title"><input type="text" value="账单缴费"/></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="model_904_cell">
+                                                <div class="model_904_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="model_904_title"><input type="text" value="联系物业"/></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="model_904_cell">
+                                                <div class="model_904_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="model_904_title"><input type="text" value="投诉建议"/></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="model_905">
+                                <div class="model_905">
+                                    <div class="model_905_cell0">
+                                        <div class="model_905_left_title"><input type="text" value="家电业务"/></div>
+                                        <div class="model_905_left_desc">
+                                            <textarea rows="3">家电清洗、空调维修、冰箱维修...</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="model_905_mid">
+                                        <div class="model_905_cell1"><input type="text" value="通知公告"/></div>
+                                        <div class="model_905_cell2"><input type="text" value="水电维修"/></div>
+                                    </div>
+                                    <div class="model_905_right">
+                                        <div class="model_905_cell3"><input type="text" value="开锁换锁"/></div>
+                                        <div class="model_905_cell4"><input type="text" value="更多"/></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="model_906">
+                                <div class="model_906">
+                                    <ul>
+                                        <li>
+                                            <div class="model_906_cell">
+                                                <div class="model_906_iconflied">
+                                                <div class="model_906_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="model_906_title"><input type="text" value="管道疏通"/></div>
+                                            </div>
+                                        </li>
+                                        <div class="model_906_line"></div>
+                                        <li>
+                                            <div class="model_906_cell">
+                                                <div class="model_906_iconflied">
+                                                <div class="model_906_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="model_906_title"><input type="text" value="家具维修"/></div>
+                                            </div>
+                                        </li>
+                                        <div class="model_906_line"></div>
+                                        <li>
+                                            <div class="model_906_cell">
+                                                <div class="model_906_iconflied">
+                                                <div class="model_906_icon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 80px; height: 80px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="model_906_title"><input type="text" value="家电维修"/></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="model_911">
+                                <div class="model_911">
+                                    <div class="model_911_cell">
+                                        <div class="model_911_txt">
+                                            <div class="model_911_title"><input type="text" value="端午献爱"/></div>
+                                            <div class="model_911_desc"><input type="text" value="包粽子献爱心"/></div>
+                                        </div>
+                                        <div class="model_911_icon">
+                                            <div class="localImag">
+                                                <form action="" method="post" enctype="multipart/form-data">
+                                                    <div class="mask"></div>
+                                                    <input type="file" name="file" class="doc" style="display:none">
+                                                    <input type="submit" style="display:none">
+                                                    <img class="preview" src="img/_defult.jpg" style="display: block; width: 90px; height: 90px;">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="model_911_line"></div>
+                                    <div class="model_911_cell">
+                                        <div class="model_911_txt">
+                                            <div class="model_911_title"><input type="text" value="小区灭蚊"/></div>
+                                            <div class="model_911_desc"><input type="text" value="灭蚊虫防疾病"/></div>
+                                        </div>
+                                        <div class="model_911_icon">
+                                            <div class="localImag">
+                                                <form action="" method="post" enctype="multipart/form-data">
+                                                    <div class="mask"></div>
+                                                    <input type="file" name="file" class="doc" style="display:none">
+                                                    <input type="submit" style="display:none">
+                                                    <img class="preview" src="img/_defult.jpg" style="display: block; width: 90px; height: 90px;">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="model_912">
+                                <div class="model_912">
+                                    <div class="model_912_img">
+                                        <div class="localImag">
+                                            <form action="" method="post" enctype="multipart/form-data">
+                                                <div class="mask"></div>
+                                                <input type="file" name="file" class="doc" style="display:none">
+                                                <input type="submit" style="display:none">
+                                                <img class="preview" src="img/_defult.jpg" style="display: block; width: 160px; height: 160px;">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="model_912_text">
+                                        <div class="model_912_title"><input type="text" value="开业大酬宾"/></div>
+                                        <div class="model_912_desc"><input type="text" value="为客户提供专业、便捷、安心的到家..."/></div>
+                                        <div class="model_912_pp">
+                                            <div class="model_912_price"><input type="text" value="256"/></div><span class="yuan">元</span>
+                                            <div class="model_912_att">
+                                                <div class="model_912_picon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview"  style="display: block; width: 30px; height: 30px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="model_912_pnum"><input type="text" value="1278"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="model_913">
+                                <div class="model_913">
+                                    <div class="model_913_img">
+                                        <div class="localImag">
+                                            <form action="" method="post" enctype="multipart/form-data">
+                                                <div class="mask"></div>
+                                                <input type="file" name="file" class="doc" style="display:none">
+                                                <input type="submit" style="display:none">
+                                                <img class="preview" src="img/_defult.jpg" style="display: block; width: 160px; height: 120px;">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="model_913_text">
+                                        <div class="model_913_title"><input type="text" value="热门新闻"/></div>
+                                        <div class="model_913_desc">
+                                            <textarea rows="2">24小时滚动报道国内、国际及社会新闻。每日编发新闻数以万计。</textarea>
+                                            <div class="model_913_att">
+                                                <div class="model_913_picon">
+                                                    <div class="localImag">
+                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                            <div class="mask"></div>
+                                                            <input type="file" name="file" class="doc" style="display:none">
+                                                            <input type="submit" style="display:none">
+                                                            <img class="preview" src="img/_defult.jpg" style="display: block; width: 30px; height: 30px;">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="model_913_pnum"><input type="text" value="2569"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="model_907">
+                                <div class="model_p907">
+                                    <div class="slider_p907">
+                                        <div class="mask_907"></div>
+
+                                        <ul class="sli_p907" id="img0">
+
+                                            <li class="slider_move">
+                                                <form action="" method="post" enctype="multipart/form-data">
+
+                                                    <input type="file" style="display: none" name="file" class="doc">
+                                                    <input type="submit" style="display:none">
+                                                    <img width="640" height="260" class="preview">
+                                                </form>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="Choose_p907">
+                                        <ul>
+                                        <li class="_nav" style="display: none"></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+    </div>
+
+
+    <div id="bottom">
+        <p style="text-align: center">景心科技</p>
+    </div>
+
+
+</body>
+</html>
